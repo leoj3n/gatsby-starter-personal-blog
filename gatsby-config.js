@@ -46,7 +46,6 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -74,8 +73,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `parts`,
-        path: `${__dirname}/content/parts/`
+        path: `${__dirname}/content/parts/`,
+        name: `parts`
       }
     },
     {
@@ -224,6 +223,13 @@ module.exports = {
       options: {
         include: /svg-icons/
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    `gatsby-plugin-netlify` // make sure to put last in the array
   ]
 };

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   background: "#222222",
   white: "#ffffff",
   accent: "#709425",

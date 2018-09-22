@@ -11,7 +11,8 @@
     "ecmaVersion": 2016,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "legacyDecorators": true
     }
   },
   "plugins": ["prettier", "react", "jsx-a11y", "import", "graphql"],

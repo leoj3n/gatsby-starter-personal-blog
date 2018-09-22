@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import FacebookProvider, { Comments } from "react-facebook";
-require("core-js/fn/array/find");
+import 'core-js/fn/array/find';
 
 import config from "../../../content/meta/config";
 

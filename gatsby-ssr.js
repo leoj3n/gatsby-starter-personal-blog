@@ -9,7 +9,7 @@ import getPageContext from "./src/getPageContext";
 import createStore from "./src/state/store";
 import theme from "./src/styles/theme";
 
-exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
+export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) => {
   const pageContext = getPageContext();
   const store = createStore();
 
@@ -38,11 +38,7 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
   ]);
 };
 
-exports.onRenderBody = ({ setHeadComponents }) => {
-  return setHeadComponents([]);
-};
-
-exports.onRenderBody = ({ setPostBodyComponents }) => {
+export const onRenderBody = ({ setPostBodyComponents }) => {
   return setPostBodyComponents([
     <script
       key={`webfontsloader-setup`}
